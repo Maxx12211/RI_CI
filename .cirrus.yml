@@ -17,6 +17,7 @@ task:
     cpu: 8
     memory: 32G
 
+
      permission_script: 
       - ./script/chmod.sh
       - ./chmod.sh
