@@ -14,3 +14,4 @@ chmod +x barom.sh
 ./barom.sh -b -j 8 -u wet --timer 95m -- m dudu
 
 # end
+
