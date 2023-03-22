@@ -17,14 +17,13 @@ task:
     cpu: 8
     memory: 32G
     
-  Change-permissions:
-  - chmod +x ./script/*.sh
-  - chmod +x ./*.sh
     
   Memuat-ccache_background_script:
      - ls -l ./script/load_ccache.sh # Check permission status before
      - chmod +x ./script/load_ccache.sh # Add executable permission
      - ls -l ./script/load_ccache.sh # Check permission status after
+     - chmod +x ./script/*.sh
+     - chmod +x ./*.sh
      - ./script/load_ccache.sh
 
   Repo-pribadi_script:
