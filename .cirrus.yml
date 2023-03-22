@@ -17,11 +17,6 @@ task:
     cpu: 8
     memory: 32G
 
-
-     permission_script: 
-      - ./script/chmod.sh
-      - ./chmod.sh
-
    Memuat-ccache_script:
       - ./script/load_ccache.sh
 
