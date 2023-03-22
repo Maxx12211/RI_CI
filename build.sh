@@ -6,12 +6,18 @@ git clone --depth=1 https://github.com/Maxx12211/android_vendor_xiaomi_rova.git 
 git clone --depth=1 https://github.com/Maxx12211/android_kernel_xiaomi_rova.git -b 13.0 kernel/xiaomi/rova
 
 # build rom
-curl -Lo barom.sh https://raw.githubusercontent.com/alanndz/barom/main/barom.sh
-chmod +x barom.sh
-./barom.sh -t ${TG_CHAT_ID} ${TG_TOKEN}
-./barom.sh --ccache-dir "${WORKDIR}/ccache" --ccache-size 20G
-./barom.sh --device rova --lunch rova-user
-./barom.sh -b -j 8 -u wet --timer 95m -- m dudu
+source $CIRRUS_WORKING_DIR/script/config
+timeStart
 
+. build/envsetup.sh
+lunch bliss_rova-user
+mkfifo reading
+tee "${BUILDLOG}" < reading &
+build_message "Building Started"
+progress &
+blissify rova -j16  > reading & sleep 95m
+
+retVal=$?
+timeEnd
+statusBuild
 # end
-

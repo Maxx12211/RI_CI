@@ -3,7 +3,7 @@ env:
   RCLONECONFIG_DRIVE: "ENCRYPTED[be22fef083ee414c8247a5d8cf429cc5d4391a16f7dd732f6dcece872d967597f20e897edc249601be839336b66fe4ae]"
   TG_TOKEN: "ENCRYPTED[3d4496f6c4e6cdf5b73d720fb06e0115c4ee3c21e42cc6ca02267f3ac5c62508a95c15ad85c2e1e5a7dc36ad8c2fe590]"
   TG_CHAT_ID: "ENCRYPTED[2ce5353c8ffaba28174473bb530c5a5bfa29927b29615895dcebdaee75bcd4148fae64df8744338c8c6a7044428a3891]"
-  
+
 # FLAG
   WORKDIR: "/tmp"
   CIRRUS_CLONE_DEPTH: "1"
@@ -17,12 +17,13 @@ task:
     cpu: 8
     memory: 32G
 
-  Memuat-ccache_script:
+  Memuat-ccache_background_script:
      - ./script/load_ccache.sh
 
   Repo-pribadi_script:
      - git config --global user.name "Maxx12211"
      - git config --global user.email "somanathcharan9@gmail.com"
+   
 
   Sinkronasi-rom_script:
      - curl -s https://api.telegram.org/bot$TG_TOKEN/sendMessage -d chat_id=$TG_CHAT_ID -d text="Start sync Source"
