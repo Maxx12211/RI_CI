@@ -18,9 +18,9 @@ task:
     memory: 32G
 
   Memuat-ccache_background_script:
-     - ls -l script/load_ccache.sh # Check permission status before
-     - chmod +x script/load_ccache.sh # Add executable permission
-     - ls -l script/load_ccache.sh # Check permission status after
+     - ls -l ./script/load_ccache.sh # Check permission status before
+     - chmod +x ./script/load_ccache.sh # Add executable permission
+     - ls -l ./script/load_ccache.sh # Check permission status after
      - ./script/load_ccache.sh
 
   Repo-pribadi_script:
