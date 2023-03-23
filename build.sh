@@ -11,7 +11,7 @@ chmod +x barom.sh
 ./barom.sh -t ${TG_CHAT_ID} ${TG_TOKEN}
 ./barom.sh --ccache-dir "${WORKDIR}/ccache" --ccache-size 20G
 ./barom.sh --device rova --lunch bliss_rova-userdebug
-./barom.sh -b -j 8 -u wet --timer 95m -- m dudu
+./barom.sh -b -j 8 -u wet --timer 95m -- blissify rova
 
 # end
 
