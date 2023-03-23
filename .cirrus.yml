@@ -17,7 +17,7 @@ task:
     cpu: 8
     memory: 32G
     
-    
+   
   Memuat-ccache_background_script:
      - ls -l ./script/load_ccache.sh # Check permission status before
      - chmod +x ./script/load_ccache.sh # Add executable permission
