@@ -13,4 +13,4 @@ chmod +x barom.sh
 ./barom.sh --device rova --lunch octavi_rova-userdebug
 ./barom.sh -b -j 6 -u wet --timer 110m -- mka bacon
 
-# end 
+# end
