@@ -1,6 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/CherishOS/android_manifest -b tiramisu -g default,-mips,-darwin,-notdefault
-git clone https://github.com/Maxx12211/Local_manifest.git --depth 1 -b cherish-blu .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/Maxx12211/android_manifest -b tiramisu -g default,-mips,-darwin,-notdefault
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
 git clone --depth=1 https://github.com/Maxx12211/android_device_xiaomi_rova.git -b 13-cherish device/xiaomi/rova
 git clone --depth=1 https://github.com/Maxx12211/android_vendor_xiaomi_rova.git -b 13 vendor/xiaomi/rova
