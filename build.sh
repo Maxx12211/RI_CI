@@ -1,7 +1,7 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/BlissRoms/platform_manifest.git -b typhoon -g default,-mips,-darwin,-notdefault
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
-git clone --depth=1 https://github.com/Maxx12211/android_device_xiaomi_rova.git -b 13-bliss device/xiaomi/rova
+repo init --depth=1 --no-repo-verify -u https://github.com/Maxx12211/android_manifest -b tiramisu -g default,-mips,-darwin,-notdefault
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
+git clone --depth=1 https://github.com/Maxx12211/android_device_xiaomi_rova.git -b 13-cherish device/xiaomi/rova
 git clone --depth=1 https://github.com/Maxx12211/android_vendor_xiaomi_rova.git -b 13 vendor/xiaomi/rova
 git clone --depth=1 https://github.com/Maxx12211/android_kernel_xiaomi_rova.git -b 13.0 kernel/xiaomi/rova
 
@@ -10,12 +10,12 @@ source $CIRRUS_WORKING_DIR/script/config
 timeStart
 
 . build/envsetup.sh
-lunch bliss_rova-user
+lunch cherish_rova-userdebug
 mkfifo reading
 tee "${BUILDLOG}" < reading &
 build_message "Building Started"
 progress &
-blissify rova -j8  > reading & sleep 95m
+mka bacon -j8  > reading & sleep 95m
 
 retVal=$?
 timeEnd
