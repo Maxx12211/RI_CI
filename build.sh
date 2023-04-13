@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/Maxx12211/android_manifest -b tiramisu3 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/Maxx12211/android_manifest -b tiramisu4 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/maxx0021/local_manifests-rdp -b a13 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
 
