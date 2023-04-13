@@ -9,6 +9,6 @@ chmod +x barom.sh
 ./barom.sh -t ${TG_CHAT_ID} ${TG_TOKEN}
 ./barom.sh --ccache-dir "${WORKDIR}/ccache" --ccache-size 20G
 ./barom.sh --device Mi8937 --lunch cherish_Mi8937-userdebug
-./barom.sh -b -j 8 -u gof --timer 95m -- mka bacon
+./barom.sh -b -j 8 -u wet --timer 95m -- mka bacon
 
 # end
