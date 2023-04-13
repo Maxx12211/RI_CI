@@ -8,7 +8,7 @@ source $CIRRUS_WORKING_DIR/script/config
 timeStart
 
 . build/envsetup.sh
-lunch cherish_Mi8937-userdebug
+lunch cherish_Mi8937-eng
 mkfifo reading
 tee "${BUILDLOG}" < reading &
 build_message "Building Started"
